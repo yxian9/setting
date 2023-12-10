@@ -1,0 +1,85 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  // new folder and new file/
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  // {
+  //   "key": "ctrl+h",
+  //   "command": "workbench.action.navigateLeft"
+  // },
+  // {
+  //   "key": "ctrl+l",
+  //   "command": "workbench.action.navigateRight"
+  // },
+  // {
+  //   "key": "ctrl+k",
+  //   "command": "workbench.action.navigateUp"
+  // },
+  // {
+  //   "key": "ctrl+j",
+  //   "command": "workbench.action.navigateDown"
+  // },
+  {
+    "key": "cmd+shift+m",
+    "command": "type",
+    "args": { "text": " |> " },
+    "when": "editorTextFocus && editorLangId == 'rmd'"
+  },
+  {
+    "key": "cmd+shift+i",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == 'rmd'",
+    "args": {
+      "snippet": "```{r}\n${TM_SELECTED_TEXT}$0\n```"
+    },
+    "label": "input indicative of r markdown code chunk"
+  },
+  {
+    "key": "cmd+shift+i",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus && editorLangId == 'python'",
+    "args": {
+      "snippet": "# %%\n"
+    },
+    "label": "input indicative of new python cell"
+  },
+  // use vim to move when gh hover.
+  {
+    "key": "h",
+    "command": "editor.action.scrollLeftHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "l",
+    "command": "editor.action.scrollRightHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "shift+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "shift+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  }
+]
